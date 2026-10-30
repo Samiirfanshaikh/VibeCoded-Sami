@@ -139,18 +139,7 @@ export const Navbar: React.FC = () => {
             className="group flex items-center gap-2.5 text-white transition-opacity duration-300 hover:opacity-85 focus:outline-none select-none"
             aria-label="Sami Shaikh - Back to top"
           >
-            <span
-              className="text-[17px] sm:text-[20px] font-normal tracking-wide text-white font-rock-salt"
-              style={{ fontFamily: 'var(--font-rock-salt)' }}
-            >
-              Sami Shaikh
-            </span>
-            <span
-              className="text-[20px] sm:text-[24px] text-white/80 select-none leading-none inline-block transition-transform duration-500 ease-out group-hover:rotate-45 group-hover:text-white"
-              aria-hidden="true"
-            >
-              ✳︎
-            </span>
+            
           </a>
 
           {/* Desktop Navigation Links Aligned to the Right */}

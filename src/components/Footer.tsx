@@ -15,7 +15,6 @@ export const Footer: React.FC = () => {
           >
             Sami Shaikh
           </span>
-          <span className="text-white text-base select-none">✳︎</span>
           <span className="text-white/40">|</span>
           <span className="text-xs font-mono uppercase tracking-wider text-white/50">
             India 🇮🇳

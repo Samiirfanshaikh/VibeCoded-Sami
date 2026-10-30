@@ -1,41 +1,41 @@
-import React, { useEffect, useState } from 'react'
-import { useTypewriter } from '../hooks/useTypewriter'
+import React, { useEffect, useState } from "react";
+import { useTypewriter } from "../hooks/useTypewriter";
 
 export const Hero: React.FC = () => {
-  const [pillsVisible, setPillsVisible] = useState(false)
-  const [copied, setCopied] = useState(false)
+  const [pillsVisible, setPillsVisible] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const typewriterText =
-    'Building my way from frontend fundamentals to full-stack applications. Currently learning, experimenting, and turning ideas into real projects.'
+    "Building my way from frontend fundamentals to full-stack applications. Currently learning, experimenting, and turning ideas into real projects.";
 
   const { displayed, done } = useTypewriter(typewriterText, {
     speed: 38,
     startDelay: 600,
-  })
+  });
 
   // Action pills become visible 400ms after page load, independently of typing
   useEffect(() => {
     const timer = setTimeout(() => {
-      setPillsVisible(true)
-    }, 400)
-    return () => clearTimeout(timer)
-  }, [])
+      setPillsVisible(true);
+    }, 400);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleScrollTo = (id: string) => {
-    const el = document.querySelector(id)
+    const el = document.querySelector(id);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
+      el.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   const handleCopyEmail = (e?: React.MouseEvent) => {
-    if (e) e.stopPropagation()
-    navigator.clipboard.writeText('samiirfanshaikh07@gmail.com')
-    setCopied(true)
+    if (e) e.stopPropagation();
+    navigator.clipboard.writeText("samiirfanshaikh07@gmail.com");
+    setCopied(true);
     setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  }
+      setCopied(false);
+    }, 2000);
+  };
 
   return (
     <section
@@ -45,13 +45,9 @@ export const Hero: React.FC = () => {
       <div className="max-w-xl relative z-10 text-left">
         {/* Hero Intro & Name Heading */}
         <div className="mb-4 sm:mb-5">
-          <p className="text-white/70 text-xs sm:text-sm font-mono uppercase tracking-widest mb-1.5 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Hey, I'm</span>
-          </p>
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl text-white font-normal leading-relaxed my-1 tracking-wide font-rock-salt"
-            style={{ fontFamily: 'var(--font-rock-salt)' }}
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-normal leading-tight my-1 tracking-wide font-rock-salt"
+            style={{ fontFamily: "var(--font-rock-salt)" }}
           >
             Sami Shaikh
           </h1>
@@ -64,10 +60,10 @@ export const Hero: React.FC = () => {
         <p
           className="text-white mb-5 sm:mb-6 text-left"
           style={{
-            fontSize: 'clamp(18px, 4vw, 26px)',
+            fontSize: "clamp(18px, 4vw, 26px)",
             lineHeight: 1.35,
             fontWeight: 400,
-            minHeight: '54px',
+            minHeight: "54px",
           }}
         >
           {displayed}
@@ -83,14 +79,14 @@ export const Hero: React.FC = () => {
         <div
           className={`flex flex-wrap gap-y-1 transition-all duration-400 ease-out ${
             pillsVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-2 pointer-events-none'
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-2 pointer-events-none"
           }`}
         >
           {/* 4 White pill buttons */}
           <button
             type="button"
-            onClick={() => handleScrollTo('#about')}
+            onClick={() => handleScrollTo("#about")}
             className="inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] whitespace-nowrap hover:bg-black hover:text-white transition-colors duration-200 cursor-pointer"
           >
             About me
@@ -98,7 +94,7 @@ export const Hero: React.FC = () => {
 
           <button
             type="button"
-            onClick={() => handleScrollTo('#projects')}
+            onClick={() => handleScrollTo("#projects")}
             className="inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] whitespace-nowrap hover:bg-black hover:text-white transition-colors duration-200 cursor-pointer"
           >
             Explore projects
@@ -106,7 +102,7 @@ export const Hero: React.FC = () => {
 
           <button
             type="button"
-            onClick={() => handleScrollTo('#skills')}
+            onClick={() => handleScrollTo("#skills")}
             className="inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] whitespace-nowrap hover:bg-black hover:text-white transition-colors duration-200 cursor-pointer"
           >
             My tech stack
@@ -114,7 +110,7 @@ export const Hero: React.FC = () => {
 
           <button
             type="button"
-            onClick={() => handleScrollTo('#contact')}
+            onClick={() => handleScrollTo("#contact")}
             className="inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] whitespace-nowrap hover:bg-black hover:text-white transition-colors duration-200 cursor-pointer"
           >
             Get in touch
@@ -127,11 +123,11 @@ export const Hero: React.FC = () => {
             title="Click to copy email address"
           >
             <span>
-              Email:{' '}
+              Email:{" "}
               <a
                 href="mailto:samiirfanshaikh07@gmail.com"
                 onClick={(e) => {
-                  e.stopPropagation()
+                  e.stopPropagation();
                 }}
                 className="underline underline-offset-1 hover:opacity-80 transition-opacity"
               >
@@ -142,8 +138,8 @@ export const Hero: React.FC = () => {
             {/* Small 12x12 copy icon (inline SVG of two overlapping rectangles) */}
             <span
               onClick={(e) => {
-                e.stopPropagation()
-                handleCopyEmail()
+                e.stopPropagation();
+                handleCopyEmail();
               }}
               className="inline-flex items-center justify-center hover:scale-110 transition-transform"
               aria-label="Copy email address"
@@ -183,5 +179,5 @@ export const Hero: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
