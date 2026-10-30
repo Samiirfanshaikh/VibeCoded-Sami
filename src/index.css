@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'Syne Tactile', system-ui, sans-serif;
+  --font-body: 'Syne Tactile', system-ui, sans-serif;
+  --font-syne-tactile: 'Syne Tactile', system-ui, sans-serif;
+  --font-rock-salt: 'Rock Salt', cursive;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #050505;
+  color: #ffffff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.syne-tactile-regular {
+  font-family: "Syne Tactile", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-syne-tactile {
+  font-family: var(--font-syne-tactile);
+}
+
+.font-rock-salt {
+  font-family: var(--font-rock-salt);
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Custom scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
