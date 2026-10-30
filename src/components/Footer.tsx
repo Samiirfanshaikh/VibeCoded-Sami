@@ -15,14 +15,35 @@ export const Footer: React.FC = () => {
           >
             Sami Shaikh
           </span>
-          <span className="text-white/40">|</span>
-          <span className="text-xs font-mono uppercase tracking-wider text-white/50">
-            India 🇮🇳
-          </span>
         </div>
 
-        <div className="text-xs text-center font-light text-white/50">
-          Personal Developer Portfolio • Strengthening fundamentals daily
+        <div className="flex items-center gap-4 text-xs font-mono uppercase tracking-wider text-white/50">
+          <a
+            href="https://github.com/Samiirfanshaikh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            GitHub
+          </a>
+          <span className="text-white/30">•</span>
+          <a
+            href="https://www.linkedin.com/in/sami-shaikh-784a89284/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            LinkedIn
+          </a>
+          <span className="text-white/30">•</span>
+          <a
+            href="https://www.instagram.com/samiirfanshaikh7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            Instagram
+          </a>
         </div>
 
         <div>

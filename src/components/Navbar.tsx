@@ -270,6 +270,35 @@ export const Navbar: React.FC = () => {
               Available for opportunities
             </span>
           </div>
+          <div className="flex items-center gap-4 text-[12px] font-mono text-white/60">
+            <a
+              href="https://github.com/Samiirfanshaikh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              GitHub ↗
+            </a>
+            <span className="text-white/20">•</span>
+            <a
+              href="https://www.linkedin.com/in/sami-shaikh-784a89284/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              LinkedIn ↗
+            </a>
+            <span className="text-white/20">•</span>
+            <a
+              href="https://www.instagram.com/samiirfanshaikh7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Instagram ↗
+            </a>
+          </div>
+
           <div className="flex justify-between items-center text-white/40 font-mono text-[11px]">
             <span>samiirfanshaikh07@gmail.com</span>
             <span>India 🇮🇳</span>

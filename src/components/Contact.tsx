@@ -14,7 +14,7 @@ export const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative z-10 w-full min-h-screen py-24 sm:py-32 px-5 sm:px-8 md:px-12 max-w-5xl mx-auto flex flex-col justify-center"
+      className="relative z-10 w-full min-h-screen py-24 sm:py-32 px-5 sm:px-8 md:px-12 max-w-6xl mx-auto flex flex-col justify-center"
     >
       {/* Section Header */}
       <div className="mb-10 sm:mb-14">
@@ -32,7 +32,7 @@ export const Contact: React.FC = () => {
       </div>
 
       {/* Contact Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {/* Email Card */}
         <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md flex flex-col justify-between hover:border-white/25 transition-all duration-300 group">
           <div>
@@ -148,6 +148,46 @@ export const Contact: React.FC = () => {
 
           <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-sm text-white/80 group-hover:text-white">
             <span>Explore Repositories</span>
+            <span className="text-base group-hover:translate-x-1 transition-transform">
+              →
+            </span>
+          </div>
+        </a>
+
+        {/* Instagram Card */}
+        <a
+          href="https://www.instagram.com/samiirfanshaikh7/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-6 sm:p-8 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md flex flex-col justify-between hover:border-white/25 transition-all duration-300 group"
+        >
+          <div>
+            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </div>
+            <h3 className="text-sm font-mono uppercase text-white/50 tracking-wider mb-1">
+              Social Network
+            </h3>
+            <p className="text-white text-base sm:text-lg font-medium">
+              Instagram Profile
+            </p>
+          </div>
+
+          <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-sm text-white/80 group-hover:text-white">
+            <span>Follow on Instagram</span>
             <span className="text-base group-hover:translate-x-1 transition-transform">
               →
             </span>
