@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 export const Contact: React.FC = () => {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('samiirfanshaikh07@gmail.com')
-    setCopied(true)
+    navigator.clipboard.writeText("samiirfanshaikh07@gmail.com");
+    setCopied(true);
     setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  }
+      setCopied(false);
+    }, 2000);
+  };
 
   return (
     <section
@@ -26,8 +26,9 @@ export const Contact: React.FC = () => {
           Let's connect.
         </h2>
         <p className="mt-4 text-white/70 text-lg sm:text-xl max-w-xl font-light leading-relaxed">
-          I am always open to discussing web development, collaborating on open-source projects, 
-          learning opportunities, or exploring entry-level roles.
+          I am always open to discussing web development, collaborating on
+          open-source projects, learning opportunities, or exploring entry-level
+          roles.
         </p>
       </div>
 
@@ -63,6 +64,7 @@ export const Contact: React.FC = () => {
             <a
               href="mailto:samiirfanshaikh07@gmail.com"
               className="text-white font-medium underline underline-offset-2 hover:opacity-70 transition-opacity"
+              target="_blank"
             >
               Open Mail ↗
             </a>
@@ -71,7 +73,7 @@ export const Contact: React.FC = () => {
               onClick={handleCopy}
               className="text-white/60 hover:text-white transition-colors cursor-pointer text-xs font-mono"
             >
-              {copied ? '✓ Copied' : 'Copy'}
+              {copied ? "✓ Copied" : "Copy"}
             </button>
           </div>
         </div>
@@ -195,5 +197,5 @@ export const Contact: React.FC = () => {
         </a>
       </div>
     </section>
-  )
-}
+  );
+};
